@@ -1,8 +1,9 @@
-import Navbar from "./components/Navbar";
-import Pageheader from "./components/Pageheader";
-import Household from "./components/Household";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
+// Home page
+import Home from "./components/Home";
+import Add from "./components/Add";
+
+// react router
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const members = [
@@ -18,21 +19,16 @@ function App() {
     },
   ];
   return (
-    <>
-      <Navbar title={"Marketplace"} />
-      <Container>
-        <Pageheader
-          title={"Your household"}
-          description={
-            "Welcome to The Marketplace! Review your household below:"
-          }
-        />
-        <Household members={members} />
-        <Button variant="contained" color="primary" onClick={() => {}}>
-          Add new member
-        </Button>
-      </Container>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/add">
+          <Add />
+        </Route>
+        <Route path="/">
+          <Home members={members} />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
