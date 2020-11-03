@@ -9,6 +9,7 @@ import useMembers from "./hooks";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  // This would most likely come from a database
   const initial_members = [
     {
       name: "Bud Baxter",
@@ -21,6 +22,7 @@ function App() {
       favorite_fruit: "Apple",
     },
   ];
+  // Custom hook for state management
   const { members, add_member } = useMembers(initial_members);
 
   return (
