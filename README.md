@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Instructions for how to run this code locally
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+To run locally:
 
-In the project directory, you can run:
+- Clone the repo
+- Run npm install
+- Run npm start
+- This will open up localhost:3000 with this application running.
 
-### `yarn start`
+# Brief description of your process
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I chose to implement this in React because it has a robust ecosystem, strong support, and I've used it before. I used material-ui for my component library because it is easy to use and looks good with little effort. Similarly, I chose react-router to handle client side routing because it is easy to set up and use with little configuration.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I didn't deviate much from the wireframe provided. I did implement a form that allows the adding of a new member. I would have liked to ask the design team about how they would have designed this screen and how they would like it to behave. I would also have liked to ask the design team if the "Marketplace" title in the navbar should be a link to the homescreen. I kept clicking it while testing, so I implemented that.
 
-### `yarn test`
+# Brief spec of how you would implement "Remove" and "Edit" a household member
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For remove, I would add an action to the "Card" that shows the person on the home screen. Something like a "Delete" button. I would then add a function to "hooks.js:useMembers" that accepts the index of that person in the "members" array, removes the object at that index, and returns the new array.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For editing, similarly, I would add a button and a function to the custom useMembers hook. That function would take an array index of person object to change and the new values of their attributes. It would return a new array with the modification done. I would also need to make changes to the "Add.js" component/screen to accept initial values so it could also be the form used for editing.
