@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 
 function MemberCard({ member }) {
   return (
-    <Card>
+    <Card variant="outlined">
       <CardContent>
         <Grid>
           <Grid item>

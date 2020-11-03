@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <AppBar position="sticky">
       <Toolbar>
-        <Typography variant="h3">Your household</Typography>
+        <Typography variant="h4">Your household</Typography>
       </Toolbar>
     </AppBar>
   );
