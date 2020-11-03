@@ -18,11 +18,12 @@ function App() {
       favorite_fruit: "Apple",
     },
   ];
+
   return (
     <Router>
       <Switch>
         <Route path="/add">
-          <Add />
+          <Add members={members} />
         </Route>
         <Route path="/">
           <Home members={members} />
