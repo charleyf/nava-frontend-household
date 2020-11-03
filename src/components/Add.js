@@ -14,12 +14,13 @@ function Add({ add_member }) {
 
   return (
     <Grid container align="center" justify="center">
-      <Grid item xs={4}>
+      <Grid item md={3} sm={6} xs={12}>
         <Card variant="outlined">
           <CardContent>
             <Grid container direction="column" spacing={2}>
               <Grid item>
                 <TextField
+                  fullWidth={true}
                   id="name"
                   value={name}
                   label="Name"
@@ -28,6 +29,7 @@ function Add({ add_member }) {
               </Grid>
               <Grid item>
                 <TextField
+                  fullWidth={true}
                   id="description"
                   value={description}
                   label="Description"
@@ -36,6 +38,7 @@ function Add({ add_member }) {
               </Grid>
               <Grid item>
                 <TextField
+                  fullWidth={true}
                   id="favorite_fruit"
                   value={favorite_fruit}
                   label="Favorite Fruit"
@@ -51,7 +54,7 @@ function Add({ add_member }) {
                   variant="contained"
                   color="primary"
                 >
-                  Add
+                  Add Member
                 </Button>
               </Grid>
             </Grid>

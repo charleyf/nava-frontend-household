@@ -6,7 +6,7 @@ function Household({ members }) {
     <Grid container spacing={2}>
       {members.map((member) => {
         return (
-          <Grid item xs={3}>
+          <Grid item md={3} sm={6} xs={12}>
             <MemberCard member={member} />
           </Grid>
         );
