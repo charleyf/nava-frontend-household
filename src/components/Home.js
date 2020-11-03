@@ -12,7 +12,6 @@ function Home({ members }) {
   const history = useHistory();
   return (
     <>
-      <Navbar title={"Marketplace"} />
       <Container>
         <Pageheader
           title={"Your household"}
