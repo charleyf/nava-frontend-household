@@ -1,20 +1,14 @@
-import { useState } from "react";
 // Home page
 import Home from "./components/Home";
 import Add from "./components/Add";
+import Navbar from "./components/Navbar";
+// Hooks
+import useMembers from "./hooks";
 
 // react router
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const history = useHistory();
-
   const initial_members = [
     {
       name: "Bud Baxter",
@@ -27,25 +21,22 @@ function App() {
       favorite_fruit: "Apple",
     },
   ];
-  const [members, setMembers] = useState(initial_members);
-  const add_member = (input) => {
-    setMembers(
-      members.concat({
-        name: "me",
-        description: "stuff",
-        favorite_fruit: "banana",
-      })
-    );
-  };
+  const { members, add_member } = useMembers(initial_members);
 
   return (
     <Router>
       <Switch>
         <Route path="/add">
-          <Add add_member={add_member} />
+          <>
+            <Navbar title={"Marketplace"} />
+            <Add add_member={add_member} />
+          </>
         </Route>
         <Route path="/">
-          <Home members={members} />
+          <>
+            <Navbar title={"Marketplace"} />
+            <Home members={members} />
+          </>
         </Route>
       </Switch>
     </Router>
