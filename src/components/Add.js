@@ -15,7 +15,7 @@ function Add({ add_member }) {
   return (
     <Grid container align="center" justify="center">
       <Grid item xs={4}>
-        <Card>
+        <Card variant="outlined">
           <CardContent>
             <Grid container direction="column" spacing={2}>
               <Grid item>
