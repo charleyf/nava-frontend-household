@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 
 function Navbar() {
     return (
-        <AppBar>
+        <AppBar position="sticky">
             <Toolbar>
                 <Typography variant='h2'>
                     Your household
