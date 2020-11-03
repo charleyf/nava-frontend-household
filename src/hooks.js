@@ -15,4 +15,4 @@ function useMembers(initial_members) {
   return { members, add_member };
 }
 
-export default useMembers;
+export { useMembers };

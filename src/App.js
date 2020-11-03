@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import Add from "./components/Add";
 import Navbar from "./components/Navbar";
 // Hooks
-import useMembers from "./hooks";
+import { useMembers } from "./hooks";
 
 // react router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

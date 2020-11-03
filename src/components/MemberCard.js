@@ -6,6 +6,7 @@ import useStyles from "../styles";
 
 function MemberCard({ member }) {
   const classes = useStyles();
+
   return (
     <Card variant="outlined">
       <CardContent>
@@ -21,10 +22,10 @@ function MemberCard({ member }) {
               component="span"
               className={classes.bold}
             >
-              Description:
+              {"Description: "}
             </Typography>
             <Typography variant="body1" component="span">
-              {" " + member?.description}
+              {member?.description}
             </Typography>
           </Grid>
           <Grid item>
@@ -33,10 +34,10 @@ function MemberCard({ member }) {
               component="span"
               className={classes.bold}
             >
-              Favorite fruit:
+              {"Favorite fruit: "}
             </Typography>
             <Typography variant="body1" component="span">
-              {" " + member?.favorite_fruit}
+              {member?.favorite_fruit}
             </Typography>
           </Grid>
         </Grid>
