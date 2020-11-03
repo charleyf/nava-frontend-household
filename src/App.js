@@ -19,7 +19,7 @@ function App() {
   ];
   return (
     <>
-      <Navbar />
+      <Navbar title={"Marketplace"} />
       <Container>
         <Pageheader
           title={"Your household"}
